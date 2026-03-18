@@ -1,0 +1,266 @@
+/* تنسيقات أساسية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #1c1e21;
+    line-height: 1.34;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px);
+    padding: 20px;
+}
+
+.content {
+    width: 100%;
+    max-width: 980px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* شعار فيسبوك */
+.logo {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.logo img {
+    width: 300px;
+    height: auto;
+}
+
+/* صندوق تسجيل الدخول */
+.login-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 396px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.login-box h2 {
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #1c1e21;
+}
+
+/* نموذج تسجيل الدخول */
+.form-group {
+    margin-bottom: 12px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px #e7f3ff;
+    outline: none;
+}
+
+.login-btn {
+    background-color: #1877f2;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 48px;
+    padding: 0 16px;
+    width: 100%;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #166fe5;
+}
+
+.forgot-password {
+    color: #1877f2;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    height: 1px;
+    background-color: #dadde1;
+    margin: 20px 0;
+}
+
+.create-btn {
+    background-color: #42b72a;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 48px;
+    padding: 0 16px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: auto;
+    min-width: 150px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.create-btn:hover {
+    background-color: #36a420;
+}
+
+/* معلومات الصفحة */
+.page-info {
+    width: 100%;
+    max-width: 396px;
+    text-align: center;
+    font-size: 15px;
+    color: #606770;
+}
+
+.page-info strong {
+    font-weight: bold;
+}
+
+/* تذييل الصفحة */
+footer {
+    background-color: #fff;
+    padding: 20px 0;
+    color: #737373;
+    font-size: 12px;
+}
+
+.footer-content {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.footer-top ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dddfe2;
+}
+
+.footer-top li {
+    margin-right: 16px;
+    margin-bottom: 8px;
+}
+
+.footer-top a {
+    color: #737373;
+    text-decoration: none;
+}
+
+.footer-top a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-top: 20px;
+}
+
+.footer-bottom li {
+    margin-right: 16px;
+    margin-bottom: 8px;
+}
+
+.footer-bottom a {
+    color: #737373;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 16px;
+}
+
+/* رسائل الخطأ */
+.error-message {
+    color: #f02849;
+    font-size: 14px;
+    margin-top: 8px;
+    text-align: center;
+    display: none;
+}
+
+/* التجاوب مع الشاشات المختلفة */
+@media (max-width: 900px) {
+    .container {
+        min-height: calc(100vh - 200px);
+    }
+
+    .logo img {
+        width: 200px;
+    }
+
+    .login-box {
+        max-width: 350px;
+    }
+
+    .login-box h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 15px;
+    }
+
+    .logo img {
+        width: 180px;
+    }
+
+    .login-box {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .login-box h2 {
+        font-size: 24px;
+    }
+
+    .footer-top ul,
+    .footer-bottom ul {
+        justify-content: center;
+    }
+}
